@@ -1,1 +1,1 @@
-# gyur2hwng.github.io
+Welcome to Gyuri Hwang's website!

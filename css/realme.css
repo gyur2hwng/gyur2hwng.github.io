@@ -1,0 +1,157 @@
+/* reset */
+* {margin:0; padding: 0px ; font-family: 'Lato';}
+li {list-style: none;}
+a {text-decoration: none;}
+
+/* nav */
+#nav {position: fixed; left: 0; top: 0; width: 100%; background-color: rgba(240,240,240,0.4);}
+#nav img {padding: 10px 0px 5px 35px;}
+#nav ul {float: right; padding: 10px 40px; }
+#nav ul li {display: inline; }
+#nav ul li a {display: inline-block; padding: 20px 15px; color: #000; font-weight: normal; font-family: 'Playfair Display'; text-transform: capitalize;}
+
+a:hover {
+  border-bottom: 1px dashed #000;
+}
+/* /end */
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Playfair Display';
+}
+
+/* page fade in */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* /end */
+
+h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+p{
+  line-height: 1.75;
+  padding: 10px 400px 0px 400px;
+}
+
+/* contents */
+#contents {text-align: center; color: #000; padding-top: 120px; padding-bottom: 150px;}
+#contents > div {height: 100vh;}
+
+/* dog slider */
+.slider-wrap {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+}
+
+.slider-img {
+    position: relative;
+    width: 690px;
+    height: 460px;
+    overflow: hidden;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, .5);
+}
+
+.slider-img .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s;
+}
+
+.slider-img .slider img {
+  max-width: 100%;
+}
+
+.slider-img .slider:nth-child(1) {z-index: 15;}
+.slider-img .slider:nth-child(2) {z-index: 14;}
+.slider-img .slider:nth-child(3) {z-index: 13;}
+.slider-img .slider:nth-child(4) {z-index: 12;}
+.slider-img .slider:nth-child(5) {z-index: 11;}
+.slider-img .slider:nth-child(6) {z-index: 10;}
+.slider-img .slider:nth-child(7) {z-index: 9;}
+.slider-img .slider:nth-child(8) {z-index: 8;}
+.slider-img .slider:nth-child(9) {z-index: 7;}
+.slider-img .slider:nth-child(10) {z-index: 6;}
+.slider-img .slider:nth-child(11) {z-index: 5;}
+.slider-img .slider:nth-child(12) {z-index: 4;}
+.slider-img .slider:nth-child(13) {z-index: 3;}
+.slider-img .slider:nth-child(14) {z-index: 2;}
+.slider-img .slider:nth-child(15) {z-index: 1;}
+
+
+/* Netflix Shows Display*/
+.container {
+  width: 1020px;
+  margin: 70px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #ffff00;
+  margin: 20px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.container .box .imgBox {
+  position: relative;
+  overflow: hidden;
+}
+
+.container .box .imgBox img {
+  max-width: 100%;
+  transition: transform 1s;
+}
+
+.container .box:hover .imgBox img {
+  transform: scale(1.2);
+}
+
+.container .box .details {
+  position: absolute;
+  top: 10px; left: 10px; bottom: 10px; right: 10px;
+  background: rgba(255, 255, 255, .8);
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container .box:hover .details {
+  opacity: 1;
+}
+
+.container .box .details .title {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 15px;
+  color: #000;
+}
+
+.container .box .details .title h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  text-transform: uppercase;
+}
